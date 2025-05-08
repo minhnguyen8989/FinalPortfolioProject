@@ -4,6 +4,20 @@ import java.io.IOException;
 import java.util.*;
 
 public class StudentData {
+    /**
+     * The main method serves as the entry point for the program.
+     * It prompts the user to enter student data (name, address, and GPA) and stores
+     * the data in a {@link LinkedList} of {@link Student} objects. The user can
+     * repeatedly input student data, and the program will validate the input to ensure
+     * that the name, address, and GPA are correctly entered.
+     * <p>
+     * The program continues to prompt for student data until the user types "done" for
+     * the name. Once "done" is entered, the program saves the collected student data
+     * to a file and terminates.
+     * </p>
+     *
+     * @param args the command line arguments (not used in this method)
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList<Student> studentList = new LinkedList<>();
