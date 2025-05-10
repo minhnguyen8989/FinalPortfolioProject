@@ -13,7 +13,7 @@ public class StudentData {
      * <p>
      * The program continues to prompt for student data until the user types "done" for
      * the name. Once "done" is entered, the program saves the collected student data
-     * to a file and terminates.
+     * to a file students.txt and terminates.
      * </p>
      *
      * @param args the command line arguments (not used in this method)
@@ -22,12 +22,13 @@ public class StudentData {
         Scanner scanner = new Scanner(System.in);
         LinkedList<Student> studentList = new LinkedList<>();
 
-        System.out.println("Enter student data. Or Type 'done' when finished.");
-
         while (true) {
+
+            System.out.println("Enter student data. Or Type 'done' when finished.");
+
             String name;
             while (true) {
-                System.out.print("Enter name (or type 'done' when finished): ");
+                System.out.print("Enter student name: ");
                 name = scanner.nextLine().trim();
                 if (name.equalsIgnoreCase("done")) {
                     scanner.close();
@@ -40,7 +41,7 @@ public class StudentData {
 
             String address;
             while (true) {
-                System.out.print("Enter address: ");
+                System.out.print("Enter student address: ");
                 address = scanner.nextLine().trim();
                 if (!address.isEmpty()) break;
                 System.out.println("Address cannot be empty. Please enter a valid address.");
@@ -48,7 +49,7 @@ public class StudentData {
 
             double gpa = -1;
             while (true) {
-                System.out.print("Enter GPA (0.0 - 4.0): ");
+                System.out.print("Enter student GPA (0.0 - 4.0): ");
                 try {
                     String input = scanner.nextLine().trim();
                     if (input.isEmpty()) {
